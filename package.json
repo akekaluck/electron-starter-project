@@ -1,0 +1,20 @@
+{
+  "name": "basic-start-electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "npm run copy && concurrently \"tsc-w\" \"./node_modules/.bin/electron ./built/main.js\"",
+    "copy": "cp ./src/public/*.html ./built/public/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "electron": "^2.0.2"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.109"
+  }
+}
